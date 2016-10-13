@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NDSU Nutrition</string>
+    <string name="action_settings">Settings</string>
+    <string name="nutrients_heading">This is the nutrients tab</string>
+    <string name="today_heading">This is the today tab</string>
+    <string name="home_heading">This is the home tab</string>
+    <string name="recap_heading">This is the recap tab</string>
+</resources>
