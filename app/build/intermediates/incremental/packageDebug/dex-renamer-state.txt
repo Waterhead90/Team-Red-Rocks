@@ -1,7 +1,0 @@
-#Mon Oct 17 21:36:29 CDT 2016
-base.0=C\:\\Users\\Blu1shbehem0th\\Documents\\School\\CS413\\NDSUNutrition\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5e4c08685d0232d077e6ff543bd1feddf961eb65
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\Users\\Blu1shbehem0th\\Documents\\School\\CS413\\NDSUNutrition\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2aef7b2ebc5983a6cc537a135b8e39029e35ecab\\classes.dex
-base.1=C\:\\Users\\Blu1shbehem0th\\Documents\\School\\CS413\\NDSUNutrition\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_2aef7b2ebc5983a6cc537a135b8e39029e35ecab
-file.0=C\:\\Users\\Blu1shbehem0th\\Documents\\School\\CS413\\NDSUNutrition\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_5e4c08685d0232d077e6ff543bd1feddf961eb65\\classes.dex
