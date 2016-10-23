@@ -5,4 +5,9 @@
     <string name="today_heading">This is the today tab</string>
     <string name="home_heading">This is the home tab</string>
     <string name="recap_heading">This is the recap tab</string>
+    <string name="choose_meal">Pick A Meal Type</string>
+    <string name="choose_restaurant">Pick A Restaurant</string>
+    <string name="choose_item">Pick A Menu Item</string>
+    <string name="select_one">Select One</string>
+    <string name="invalid_selection">Please select a valid value</string>
 </resources>
