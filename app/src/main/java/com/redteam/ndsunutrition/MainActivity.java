@@ -53,8 +53,6 @@ public class MainActivity extends AppCompatActivity
     public void addItem(View view)
     {
         Intent intent = new Intent(this, AddItemActivity.class);
-        String message = "you clicked the add item button!";
-        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 

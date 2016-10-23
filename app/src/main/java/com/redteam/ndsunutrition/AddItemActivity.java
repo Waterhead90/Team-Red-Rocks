@@ -3,10 +3,15 @@ package com.redteam.ndsunutrition;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class AddItemActivity extends AppCompatActivity
 {
+    private Button restaurantButton;
+    private Button customMealButton;
+    private TextView pickMealTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -16,12 +21,19 @@ public class AddItemActivity extends AppCompatActivity
 
         Intent intent = getIntent();
 
-        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        restaurantButton = (Button) findViewById(R.id.buttonRestaurant);
+        customMealButton = (Button) findViewById(R.id.buttonCustomMeal);
+        pickMealTextView = (TextView) findViewById(R.id.textViewPickMeal);
+    }
 
-        TextView textView = new TextView(this);
-        textView.setTextSize(20);
-        textView.setText(message);
+    public void goToRestaurants(View view)
+    {
+        Intent intent = new Intent(this, PickRestaurantActivity.class);
+        startActivity(intent);
+    }
 
-        setContentView(textView);
+    public void createCustomMeal(View view)
+    {
+        // Send intent to custom meal creation class here
     }
 }

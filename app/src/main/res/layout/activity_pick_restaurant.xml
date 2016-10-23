@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.redteam.ndsunutrition.PickRestaurantActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_restaurant"
+        android:id="@+id/textViewPickRestaurant"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerRestaurants"
+        android:layout_below="@+id/textViewPickRestaurant"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        style="@style/AppTheme" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/spinnerRestaurants"
+        android:text="Select Restaurant"
+        android:id="@+id/buttonSelectRestaurant"
+        android:onClick="viewMenu"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/invalid_selection"
+        android:id="@+id/textViewInvalidRestaurant"
+        android:layout_below="@+id/buttonSelectRestaurant"
+        android:layout_alignStart="@+id/buttonSelectRestaurant"
+        android:visibility="invisible"
+        android:textColor="@color/design_textinput_error_color_light" />
+</RelativeLayout>

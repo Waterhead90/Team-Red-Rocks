@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_add_item"
     android:layout_width="match_parent"
@@ -9,5 +10,32 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.redteam.ndsunutrition.AddItemActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_meal"
+        android:id="@+id/textViewPickMeal"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Meal"
+        android:id="@+id/buttonRestaurant"
+        android:layout_below="@id/textViewPickMeal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
+        android:onClick="goToRestaurants"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom Meal"
+        android:id="@+id/buttonCustomMeal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="createCustomMeal"/>
 </RelativeLayout>
