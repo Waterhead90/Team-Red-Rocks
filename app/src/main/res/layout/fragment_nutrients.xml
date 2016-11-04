@@ -1,16 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    app:layout_scrollFlags="scroll">
 
-    <TextView
-        android:text="@string/nutrients_heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:id="@+id/nutrientsTextView"
-        android:layout_weight="1"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width = "fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/nutrients_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/textView15"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textStyle="normal|bold"
+                android:textColor="@android:color/background_dark" />
+
+
+            <TextView
+                android:text="calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textCalories"
+                tools:text="calories"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/caloriesProgressBar"
+                android:layout_width="325dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="total fat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textTotalFat"
+                tools:text="total fat"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/totalFatProgressBar"
+                android:layout_width="325dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="saturated fat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textSaturatedFat"
+                tools:text="saturated fat"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/saturatedFatProgressBar"
+                android:layout_width="325dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="cholesterol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textCholesterol"
+                tools:text="cholesterol"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/cholesterolProgressBar"
+                android:layout_width="325dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="sodium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textSodium"
+                tools:text="sodium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="325dp"
+                android:id="@+id/sodiumProgressBar"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="total carbohydrates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalCarbsText"
+                tools:text="total carbohydrates"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="325dp"
+                android:id="@+id/totalCarbProgessBar"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="dietary fiber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dietaryFiberText"
+                tools:text="dietary fiber"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="325dp"
+                android:id="@+id/dietaryFiberProgressBar"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="sugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sugarText"
+                tools:text="sugar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="325dp"
+                android:id="@+id/sugarProgessBar"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="protein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/proteinText"
+                tools:text="protein"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="325dp"
+                android:id="@+id/proteinProgressBar"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:text="potassium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/potassiumText"
+                tools:text="potassium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/potassiumProgressBar"
+                android:layout_width="325dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        </ScrollView>
 </LinearLayout>

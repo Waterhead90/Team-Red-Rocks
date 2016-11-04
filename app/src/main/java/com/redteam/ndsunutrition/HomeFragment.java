@@ -1,6 +1,8 @@
 package com.redteam.ndsunutrition;
 
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -37,16 +39,18 @@ public class HomeFragment extends Fragment
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.circular);
         final ProgressBar mProgress = (ProgressBar) rootView.findViewById(R.id.circularProgressbar);
-        mProgress.setProgress(0);   // Main Progress
-        mProgress.setSecondaryProgress(100); // Secondary Progress
-        mProgress.setMax(100); // Maximum Progress
+        int progress = 4000;
+
+
+        mProgress.setMax(4000); // Maximum Progress
+        mProgress.setSecondaryProgress(4000); // Secondary Progress
         mProgress.setProgressDrawable(drawable);
 
         tv = (TextView) rootView.findViewById(R.id.tv);
 
-        mProgress.setProgress(72);
+        mProgress.setProgress(progress);
 
-        tv.setText("72%");
+        tv.setText("" + progress);
         return rootView;
     }
 }
