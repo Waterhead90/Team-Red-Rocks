@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/choose_meal"
         android:id="@+id/textViewPickMeal"
+        android:textColor="@android:color/background_dark"
         android:textSize="@dimen/abc_text_size_display_1_material"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
