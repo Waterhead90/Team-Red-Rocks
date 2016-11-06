@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NDSUNutrition.iml" filepath="$PROJECT_DIR$/NDSUNutrition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Team-Red-Rocks.iml" filepath="$PROJECT_DIR$/Team-Red-Rocks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>
