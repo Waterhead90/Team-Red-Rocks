@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/NDSUNutrition.iml" filepath="$PROJECT_DIR$/NDSUNutrition.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/App_Engine/App_Engine.iml" filepath="$PROJECT_DIR$/App_Engine/App_Engine.iml" />
->>>>>>> refs/remotes/origin/Development
       <module fileurl="file://$PROJECT_DIR$/Team-Red-Rocks.iml" filepath="$PROJECT_DIR$/Team-Red-Rocks.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
