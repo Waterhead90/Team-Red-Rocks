@@ -1,12 +1,16 @@
 package com.redteam.ndsunutrition;
 
+import android.app.ListFragment;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -34,19 +38,31 @@ public class HomeFragment extends Fragment
     {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
+        ListView list = (ListView) rootView.findViewById(R.id.recommendationList);
+        RecommendationAdapter listAdapter = new RecommendationAdapter(getContext(),R.layout.fragment_recommendation_item);
+        list.setAdapter(listAdapter);
+
+        for(int i = 0; i != 5; i++)
+        {
+            listAdapter.add("Generic Placeholder");
+        }
+
+
         Resources res = getResources();
         Drawable drawable = res.getDrawable(R.drawable.circular);
         final ProgressBar mProgress = (ProgressBar) rootView.findViewById(R.id.circularProgressbar);
-        mProgress.setProgress(0);   // Main Progress
-        mProgress.setSecondaryProgress(100); // Secondary Progress
-        mProgress.setMax(100); // Maximum Progress
+        int progress = 4000;
+
+
+        mProgress.setMax(4000); // Maximum Progress
+        mProgress.setSecondaryProgress(4000); // Secondary Progress
         mProgress.setProgressDrawable(drawable);
 
         tv = (TextView) rootView.findViewById(R.id.tv);
 
-        mProgress.setProgress(72);
+        mProgress.setProgress(progress);
 
-        tv.setText("72%");
+        tv.setText("" + progress);
         return rootView;
     }
 }
