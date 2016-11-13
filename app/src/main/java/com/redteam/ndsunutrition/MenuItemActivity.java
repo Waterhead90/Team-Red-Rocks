@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,12 +18,12 @@ public class MenuItemActivity extends AppCompatActivity
 
     private TextView menuTextView;
     private TextView invalidTextView;
+    private TextView noItemsTextView;
     private Spinner menuItemSpinner;
-    private Button addMealButton;
     private ArrayAdapter<String> adapter;
     private ArrayList<String> menuItems;
+    private ArrayList<String> mealItems;
 
-    public final static String EXTRA_MESSAGE = "com.redteam.ndsunutrition.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -35,8 +36,11 @@ public class MenuItemActivity extends AppCompatActivity
         menuTextView = (TextView) findViewById(R.id.textViewPickMeal);
         invalidTextView = (TextView) findViewById(R.id.textViewInvalidItem);
         invalidTextView.setVisibility(View.INVISIBLE);
+        noItemsTextView = (TextView) findViewById(R.id.textViewNoItems);
+        noItemsTextView.setVisibility(View.INVISIBLE);
         menuItemSpinner = (Spinner) findViewById(R.id.spinnerMenuItems);
-        addMealButton = (Button) findViewById(R.id.buttonAddMeal);
+
+        mealItems = new ArrayList<>();
 
         getMenuItems(restaurant);
         addItemSelectedListenerToSpinner();
@@ -101,17 +105,40 @@ public class MenuItemActivity extends AppCompatActivity
         }
     }
 
-    public void addMeal(View view)
+    public void addMealItem(View view)
     {
+        Toast toast;
+        toast = Toast.makeText(getApplicationContext(), "Item Added!", Toast.LENGTH_SHORT);
         // Show the invalid TextView if the user tries to submit the default value
         if(menuItemSpinner.getSelectedItem().toString().equals("Select One"))
         {
             invalidTextView.setVisibility(View.VISIBLE);
         }
-        else // Send an intent to return to mainActivity
-             // We will also need to save the meal data here or call another method to do so
+        else
         {
-            Intent intent = new Intent(this, MainActivity.class);
+            mealItems.add(menuItemSpinner.getSelectedItem().toString());
+            noItemsTextView.setVisibility(View.INVISIBLE);
+            toast.show();
+        }
+    }
+
+    public void reviewMeal(View view)
+    {
+        // Show the invalid TextView if the user tries to submit the default value
+        if(mealItems.isEmpty())
+        {
+            noItemsTextView.setVisibility(View.VISIBLE);
+        }
+        else // Send an intent to return to mainActivity
+        // We will also need to save the meal data here or call another method to do so
+        {
+            String[] mealItemsArray = new String[mealItems.size()];
+            for(int i = 0; i < mealItems.size(); i++)
+            {
+                mealItemsArray[i] = mealItems.get(i);
+            }
+            Intent intent = new Intent(this, ReviewMealActivity.class);
+            intent.putExtra("Meal items", mealItemsArray);
             startActivity(intent);
         }
     }

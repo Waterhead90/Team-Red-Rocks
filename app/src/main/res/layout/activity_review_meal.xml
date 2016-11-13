@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    app:layout_scrollFlags="scroll">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/review_meal"
+        android:id="@+id/textViewReviewMeal"
+        android:textColor="@android:color/background_dark"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/abc_text_size_display_1_material" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_meal"
+        android:id="@+id/buttonSubmitMeal"
+        android:onClick="submitMeal"
+        android:layout_below="@+id/textViewReviewMeal"
+        android:layout_centerHorizontal="true" />
+    <ScrollView
+        android:id="@+id/scrollViewReview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonSubmitMeal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutReview">
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
