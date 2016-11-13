@@ -6,10 +6,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -71,19 +74,33 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
-            case R.id.settings:
-                
+            case R.id.user_profile:
+                Toast.makeText(this, "User Profile Button Pressed", Toast.LENGTH_LONG).show();
                 return true;
-//            case R.id.help:
-//                showHelp();
-//                return true;
+            case R.id.dashboard:
+                Toast.makeText(this, "Dashboard Button Pressed", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.recommendations:
+                Toast.makeText(this, "Recommendations Button Pressed", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.custom_recipes:
+                Toast.makeText(this, "Custom Recipes Button Pressed", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.export_data:
+                Toast.makeText(this, "Exported Data Button Pressed", Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.about:
+                Toast.makeText(this, "About Button Pressed", Toast.LENGTH_LONG).show();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    public void getSettings(View view)
-    {
-
+    public void showPopup(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+        MenuInflater inflater = popup.getMenuInflater();
+        inflater.inflate(R.menu.menu_main, popup.getMenu());
+        popup.show();
     }
 }

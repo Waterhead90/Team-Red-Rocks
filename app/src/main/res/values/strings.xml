@@ -22,5 +22,6 @@
     <string name="change_time">Change Time</string>
     <string name="no_meals_text">You haven\'t added any meals today</string>
     <string name="select_restaurant">Select Restaurant</string>
->>>>>>> refs/remotes/origin/Development
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    >>>>>>> refs/remotes/origin/Development
 </resources>

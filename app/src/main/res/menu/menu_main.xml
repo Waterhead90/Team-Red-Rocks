@@ -24,7 +24,8 @@
                 android:title="@string/export_data"/>
             <item
                 android:id="@+id/about"
-                android:title="@string/about"/>
+                android:title="@string/about" />
+
         </menu>
 `   </item>
 
