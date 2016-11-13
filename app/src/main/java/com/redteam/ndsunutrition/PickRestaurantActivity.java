@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -24,21 +25,18 @@ import java.util.Calendar;
 public class PickRestaurantActivity extends AppCompatActivity
 {
     private TextView invalidTextView;
-    private TextView timeTextView;
     private Spinner restaurantSpinner;
     private Spinner spinnerDate;
-    private Button selectRestaurantButton;
-    private Button changeTimeButton;
+    private Spinner spinnerTime;
+    private RadioButton radioButtonAM;
+    private RadioButton radioButtonPM;
     private ArrayAdapter<String> adapter;
     private ArrayList<String> restaurants;
     private CalendarSpinnerAdapter mSpinnerDateAdapter;
-    private CustomTimePickerDialog mTimePickerDioalg;
 
     private int hour;
     private int minute;
-    private String ampm;
 
-    static final int TIME_DIALOG_ID = 999;
     public final static String EXTRA_MESSAGE = "com.redteam.ndsunutrition.MESSAGE";
 
     @Override
@@ -50,24 +48,49 @@ public class PickRestaurantActivity extends AppCompatActivity
         Intent intent = getIntent();
 
         invalidTextView = (TextView) findViewById(R.id.textViewInvalidRestaurant);
-        timeTextView = (TextView) findViewById(R.id.textViewTime);
         invalidTextView.setVisibility(View.INVISIBLE);
         restaurantSpinner = (Spinner) findViewById(R.id.spinnerRestaurants);
-        selectRestaurantButton = (Button) findViewById(R.id.buttonSelectRestaurant);
-        changeTimeButton = (Button) findViewById(R.id.buttonChangeTime);
         spinnerDate = (Spinner) findViewById(R.id.spinnerDate);
+        spinnerTime = (Spinner) findViewById(R.id.spinnerTime);
+        radioButtonAM = (RadioButton) findViewById(R.id.radioButtonAM);
+        radioButtonPM = (RadioButton) findViewById(R.id.radioButtonPM);
 
         setCurrentTime();
         getRestaurants();
         addItemSelectedListenerToSpinner();
         setUpDateSpinner();
+
+        /*
+        Create empty meal object with default constructor
+         */
     }
 
+    // Very long method to set the current time
     private void setCurrentTime()
     {
         final Calendar c = Calendar.getInstance();
         hour = c.get(Calendar.HOUR_OF_DAY );
         minute = c.get(Calendar.MINUTE);
+
+        // Make hour into a 12-hour format
+        if(hour > 12)
+        {
+            hour = hour % 12;
+            radioButtonPM.setChecked(true);
+        }
+        else if(hour == 12)
+        {
+            radioButtonPM.setChecked(true);
+        }
+        else if(hour == 0)
+        {
+            hour = 12;
+            radioButtonAM.setChecked(true);
+        }
+        else
+        {
+            radioButtonAM.setChecked(true);
+        }
 
         // Round to nearest half-hour increment
         if(minute >= 15 && minute <= 45)
@@ -84,28 +107,107 @@ public class PickRestaurantActivity extends AppCompatActivity
             minute = 0;
         }
 
-        // Make hours display in a 12-hour format
-        if(hour > 12)
+        // Use hour and minute to set the selection
+        // This is super long and probably not the best
+        switch(hour)
         {
-            hour = hour % 12;
-            ampm = " PM";
+            case 1:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(0);
+                else
+                    spinnerTime.setSelection(1);
+                break;
+            }
+            case 2:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(2);
+                else
+                    spinnerTime.setSelection(3);
+                break;
+            }
+            case 3:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(4);
+                else
+                    spinnerTime.setSelection(5);
+                break;
+            }
+            case 4:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(6);
+                else
+                    spinnerTime.setSelection(7);
+                break;
+            }
+            case 5:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(8);
+                else
+                    spinnerTime.setSelection(9);
+                break;
+            }
+            case 6:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(10);
+                else
+                    spinnerTime.setSelection(11);
+                break;
+            }
+            case 7:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(12);
+                else
+                    spinnerTime.setSelection(13);
+                break;
+            }
+            case 8:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(14);
+                else
+                    spinnerTime.setSelection(15);
+                break;
+            }
+            case 9:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(16);
+                else
+                    spinnerTime.setSelection(17);
+                break;
+            }
+            case 10:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(18);
+                else
+                    spinnerTime.setSelection(19);
+                break;
+            }
+            case 11:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(20);
+                else
+                    spinnerTime.setSelection(21);
+                break;
+            }
+            case 12:
+            {
+                if(minute == 0)
+                    spinnerTime.setSelection(22);
+                else
+                    spinnerTime.setSelection(23);
+                break;
+            }
         }
-        else if(hour == 12)
-        {
-            ampm = " PM";
-        }
-        else if(hour == 0)
-        {
-            hour = 12;
-            ampm = " AM";
-        }
-        else
-        {
-            ampm = " AM";
-        }
-        // set current time into textview
-        timeTextView.setText(new StringBuilder().append(pad(hour)).append(":").append(pad(minute)).append(ampm));
-
     }
     private void addItemSelectedListenerToSpinner()
     {
@@ -189,61 +291,13 @@ public class PickRestaurantActivity extends AppCompatActivity
             Intent intent = new Intent(this, MenuItemActivity.class);
 
             String selection = restaurantSpinner.getSelectedItem().toString();
+            /*
+            set meal location variable as the selection
+            set meal date as the selected date and time
+            send meal object to next activity
+             */
             intent.putExtra(EXTRA_MESSAGE, selection);
             startActivity(intent);
         }
-    }
-
-    public void changeTime(View view)
-    {
-        showDialog(TIME_DIALOG_ID);
-    }
-
-    @Override
-    protected Dialog onCreateDialog(int id) {
-        switch (id) {
-            case TIME_DIALOG_ID:
-                // set time picker as current time
-                return new CustomTimePickerDialog(this, timePickerListener, hour, minute, false);
-
-        }
-        return null;
-    }
-
-    private TimePickerDialog.OnTimeSetListener timePickerListener =
-            new CustomTimePickerDialog.OnTimeSetListener()
-            {
-                public void onTimeSet(TimePicker view, int selectedHour, int selectedMinute) {
-                    hour = selectedHour;
-                    minute = selectedMinute;
-                    if(hour > 12)
-                    {
-                        hour = hour % 12;
-                        ampm = " PM";
-                    }
-                    else if(hour == 12)
-                    {
-                        ampm = " PM";
-                    }
-                    else if(hour == 0)
-                    {
-                        hour = 12;
-                        ampm = " AM";
-                    }
-                    else
-                    {
-                        ampm = " AM";
-                    }
-                    // set current time into textview
-                    timeTextView.setText(new StringBuilder().append(pad(hour)).append(":").append(pad(minute)).append(ampm));
-                }
-            };
-
-    private static String pad(int c)
-    {
-        if (c >= 10)
-            return String.valueOf(c);
-        else
-            return "0" + String.valueOf(c);
     }
 }
