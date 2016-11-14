@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface MenuInterface {
     public String getName();
-    public void serName(String name);
+    public void setName(String name);
     public double getServingSize();
     public void setServingSize(double serving);
     public String getServingUnit();

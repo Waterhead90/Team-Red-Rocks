@@ -14,14 +14,14 @@ import java.util.List;
  */
 public class StandardUserProfile implements UserProfile {
     
-    public int recommendedCalories = 2000;
-    public int weight;
-    public int height;
-    public char gender;
-    public int age;
-    public int activityLevel;
+    private int recommendedCalories = 2000;
+    private int weight;
+    private int height;
+    private char gender;
+    private int age;
+    private int activityLevel;
     
-    public List <Meal> meals = new ArrayList();
+    private List <Meal> meals = new ArrayList();
 
     public StandardUserProfile() {
         

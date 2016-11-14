@@ -16,13 +16,13 @@ import java.util.Objects;
  */
 public class MenuItem implements MenuInterface{
     
-    public String name;
-    public double servingSize;
-    public String servingUnit;
-    public List <Nutrient> nutrients = new ArrayList();
-    public String category;
-    public String infoSource;
-    public String venue;
+    private String name;
+    private double servingSize;
+    private String servingUnit;
+    private List <Nutrient> nutrients = new ArrayList();
+    private String category;
+    private String infoSource;
+    private String venue;
 
     public MenuItem(String name, double servingSize, String servingUnit, Nutrient nutrient, String category, String infoSource, String venue) 
     {
@@ -92,7 +92,7 @@ public class MenuItem implements MenuInterface{
     }
 
     @Override
-    public void serName(String name) {
+    public void setName(String name) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

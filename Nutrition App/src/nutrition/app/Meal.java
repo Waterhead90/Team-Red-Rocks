@@ -14,14 +14,19 @@ import java.util.List;
  */
 public class Meal {
     
-    public Venue location;
-    public Date date;
-    public List<MealEntry> mealEntries = new ArrayList();
+    private Venue location;
+    private Date date;
+    private List<MealEntry> mealEntries = new ArrayList();
 
     public Meal(Venue location, Date date, MealEntry mealEntry) {
         this.location = location;
         this.date = date;
         mealEntries.add(mealEntry);
+    }
+    
+    public Meal()
+    {
+        
     }
 
     public Venue getLocation() {

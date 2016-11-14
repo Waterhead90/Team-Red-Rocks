@@ -1,4 +1,4 @@
-package javaapplication1;
+package nutrition.app;
 
 /**
  *
@@ -9,12 +9,11 @@ public class Recommendation {
     private String message;
     private String source;
     
-    public String Recommendation(String title, String message, String source)
+    public Recommendation(String title, String message, String source)
     {
     this.title = title;
     this.message = message;
     this.source = source;
-    return title + ", " + message + ", " + source;
     }
 
     public String getTitle() {

@@ -13,8 +13,8 @@ import java.util.Objects;
  */
 public class Nutrient extends MenuItem{
     
-    public String name;
-    public String unit;
+    private String name;
+    private String unit;
     
     public Nutrient (String n, String u)
     {
