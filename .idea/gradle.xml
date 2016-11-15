@@ -8,8 +8,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/AppEngine" />
             <option value="$PROJECT_DIR$/App_Engine" />
+            <option value="$PROJECT_DIR$/Unused" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
