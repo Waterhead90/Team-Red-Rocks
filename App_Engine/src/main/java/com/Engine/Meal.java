@@ -1,9 +1,10 @@
+package com.Engine;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,15 +14,20 @@ import java.util.List;
  * @author jordan.r.falcon
  */
 public class Meal {
-    
-    public Venue location;
-    public Date date;
-    public List<MealEntry> mealEntries = new ArrayList();
+
+    private Venue location;
+    private Date date;
+    private List<MealEntry> mealEntries = new ArrayList();
 
     public Meal(Venue location, Date date, MealEntry mealEntry) {
         this.location = location;
         this.date = date;
         mealEntries.add(mealEntry);
+    }
+
+    public Meal()
+    {
+
     }
 
     public Venue getLocation() {
@@ -48,8 +54,8 @@ public class Meal {
 //    public void setMealEntries(int index, List<MealEntry> mealEntries) {
 //        mealEntries.set(index, mealEntries);
 //    }
-    
 
 
-    
+
+
 }

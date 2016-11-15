@@ -1,9 +1,10 @@
+package com.Engine;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public interface MenuInterface {
     public String getName();
-    public void serName(String name);
+    public void setName(String name);
     public double getServingSize();
     public void setServingSize(double serving);
     public String getServingUnit();
@@ -26,5 +27,5 @@ public interface MenuInterface {
     public void setInfoSource(String source);
     public String getVenue();
     public void setVenue(String venue);
-    
+
 }

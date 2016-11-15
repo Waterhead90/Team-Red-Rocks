@@ -1,4 +1,4 @@
-package com.example;
+package com.Engine;
 
 /**
  *
@@ -10,16 +10,16 @@ public class MealDate implements Date {
     private int day;
     private int hour;
     private int minute;
-    
+
     public String MealDate(int year, int month, int day, int hour, int minute)
-    { 
+    {
         String info = "";
         this.year = year;
         this.month = month;
         this.day = day;
         this.hour = hour;
         this.minute = minute;
-        
+
         info = year + ", " + month + ", " + day + ", " + hour + ", " + minute;
         return info;
     }
@@ -36,7 +36,7 @@ public class MealDate implements Date {
 
     @Override
     public int getMonth() {
-       return this.month;
+        return this.month;
     }
 
     @Override
@@ -79,18 +79,18 @@ public class MealDate implements Date {
         return "Year: " + year + " Month: " + month + " Day: " + day + " Hour: "
                 + hour + " Minute: " + minute;
     }
-    
+
     @Override
     public String toString()
     {
-       String s = year + ", " + month + ", " + day + ", " + hour + ", " + minute;
+        String s = year + ", " + month + ", " + day + ", " + hour + ", " + minute;
         return s;
     }
-    
+
     /*@Override
     public boolean equals(Object o)
     {
-        
+
     }
     */
 }

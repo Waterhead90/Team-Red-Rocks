@@ -1,9 +1,10 @@
+package com.Engine;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example;
 
 import java.util.Objects;
 
@@ -12,10 +13,10 @@ import java.util.Objects;
  * @author jordan.r.falcon
  */
 public class Nutrient extends MenuItem{
-    
-    public String name;
-    public String unit;
-    
+
+    private String name;
+    private String unit;
+
     public Nutrient (String n, String u)
     {
         name = n;
@@ -69,6 +70,6 @@ public class Nutrient extends MenuItem{
     public String toString() {
         return "nutrient{" + "name =" + name + ", unit =" + unit + '}';
     }
-    
-    
+
+
 }

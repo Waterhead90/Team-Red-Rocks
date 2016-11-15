@@ -1,9 +1,10 @@
+package com.Engine;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example;
 
 
 import java.util.ArrayList;
@@ -15,16 +16,16 @@ import java.util.Objects;
  * @author jordan.r.falcon
  */
 public class MenuItem implements MenuInterface{
-    
-    public String name;
-    public double servingSize;
-    public String servingUnit;
-    public List <Nutrient> nutrients = new ArrayList();
-    public String category;
-    public String infoSource;
-    public String venue;
 
-    public MenuItem(String name, double servingSize, String servingUnit, Nutrient nutrient, String category, String infoSource, String venue) 
+    private String name;
+    private double servingSize;
+    private String servingUnit;
+    private List<Nutrient> nutrients = new ArrayList();
+    private String category;
+    private String infoSource;
+    private String venue;
+
+    public MenuItem(String name, double servingSize, String servingUnit, Nutrient nutrient, String category, String infoSource, String venue)
     {
         this.name = name;
         this.servingSize = servingSize;
@@ -92,7 +93,7 @@ public class MenuItem implements MenuInterface{
     }
 
     @Override
-    public void serName(String name) {
+    public void setName(String name) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -155,5 +156,5 @@ public class MenuItem implements MenuInterface{
     public void setVenue(String venue) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-  
+
 }
