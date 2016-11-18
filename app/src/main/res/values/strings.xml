@@ -28,6 +28,10 @@
     <string name="review_meal">Review Meal</string>
     <string name="no_items">Please add at least one item to the meal</string>
     <string name="submit_meal">Submit Meal</string>
+    <string-array name="catagory_selection">
+        <item>Calories</item>
+        <item>Other</item>
+    </string-array>
     <string-array name="time_array">
         <item>01:00</item>
         <item>01:30</item>

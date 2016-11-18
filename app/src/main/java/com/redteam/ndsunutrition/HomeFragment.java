@@ -44,7 +44,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemSelected
 
         //Create reference to Spinner and setup adapter
         Spinner selectionSpinner = (Spinner) rootView.findViewById(R.id.selectionSpinner);
-        ArrayAdapter spinnerAdapter = ArrayAdapter.createFromResource(getContext(),R.array.time_array,android.R.layout.simple_spinner_item); // using time Array as a placeholder
+        ArrayAdapter spinnerAdapter = ArrayAdapter.createFromResource(getContext(),R.array.catagory_selection,android.R.layout.simple_spinner_item); // using time Array as a placeholder
         selectionSpinner.setAdapter(spinnerAdapter);
         selectionSpinner.setOnItemSelectedListener(this);
 
