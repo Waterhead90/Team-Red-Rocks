@@ -1,4 +1,4 @@
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -7,43 +7,54 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="250dp"
+        tools:context="idk"
+        android:layout_row="0"
+        android:layout_column="0">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="250dp"
             android:layout_height="250dp"
-            tools:context="idk"
-            android:layout_row="0"
-            android:layout_column="0">
+            android:gravity="center"
+            android:text="25%"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:layout_alignBottom="@+id/circularProgressbar"
+            android:layout_alignStart="@+id/circularProgressbar" />
 
-            <TextView
-                android:id="@+id/tv"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:gravity="center"
-                android:text="25%"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp"
-                android:layout_alignBottom="@+id/circularProgressbar"
-                android:layout_alignStart="@+id/circularProgressbar" />
+        <ProgressBar
 
-            <ProgressBar
+            android:id="@+id/circularProgressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="25"
+            android:progressDrawable="@drawable/circular"
+            android:secondaryProgress="100"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
-                android:id="@+id/circularProgressbar"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
-                android:indeterminate="false"
-                android:max="100"
-                android:progress="25"
-                android:progressDrawable="@drawable/circular"
-                android:secondaryProgress="100"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-
-        </RelativeLayout>
+        <TextView
+            android:text="Recommendations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/txtRecommendations"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     </RelativeLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recommendationList"
+        ></ListView>
+
+
+</LinearLayout>

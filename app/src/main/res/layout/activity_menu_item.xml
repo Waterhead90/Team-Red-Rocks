@@ -32,9 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@id/spinnerMenuItems"
-        android:text="Add Meal"
+        android:text="@string/add_item"
         android:id="@+id/buttonAddMeal"
-        android:onClick="addMeal"
+        android:onClick="addMealItem"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -49,4 +49,27 @@
         android:layout_alignStart="@+id/buttonAddMeal"
         android:visibility="invisible"
         android:textColor="@color/design_textinput_error_color_light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/no_items"
+        android:id="@+id/textViewNoItems"
+        android:layout_below="@+id/buttonReviewMeal"
+        android:layout_alignStart="@+id/buttonReviewMeal"
+        android:visibility="invisible"
+        android:textColor="@color/design_textinput_error_color_light" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/review_meal"
+        android:id="@+id/buttonReviewMeal"
+        android:onClick="reviewMeal"
+        android:layout_below="@+id/textViewInvalidItem"
+        android:layout_alignStart="@+id/textViewInvalidItem"
+        android:layout_marginTop="43dp" />
 </RelativeLayout>

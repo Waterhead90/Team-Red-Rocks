@@ -10,10 +10,17 @@
     <string name="choose_item">Pick A Menu Item</string>
     <string name="select_one">Select One</string>
     <string name="invalid_selection">Please select a valid value</string>
+    <string name="user_profile">User Profile</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="custom_recipes">Custom Recipes</string>
+    <string name="export_data">Export data</string>
+    <string name="about">About</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="restaurant">Restaurant</string>
     <string name="change_time">Change Time</string>
     <string name="no_meals_text">You haven\'t added any meals today</string>
     <string name="select_restaurant">Select Restaurant</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
 </resources>

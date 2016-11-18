@@ -19,7 +19,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/no_meals_text"
-        android:id="@+id/textViewNoMeals"
+        android:id="@+id/textViewMeals"
         android:layout_gravity="center_horizontal" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/meal_list"
+        ></ListView>
 </LinearLayout>

@@ -23,6 +23,7 @@
         <activity android:name=".AddItemActivity" />
         <activity android:name=".PickRestaurantActivity" />
         <activity android:name=".MenuItemActivity" />
+        <activity android:name=".ReviewMealActivity"></activity>
     </application>
 
 </manifest>

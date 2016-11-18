@@ -81,7 +81,7 @@
         android:textColor="@android:color/background_dark"
         android:id="@+id/textViewRestaurant"
         android:layout_above="@+id/spinnerRestaurants"
-        android:layout_alignLeft="@+id/textViewTime" />
+        android:layout_alignStart="@+id/spinnerTime" />
 
     <Spinner
         android:layout_width="wrap_content"
@@ -90,24 +90,35 @@
         android:layout_below="@+id/textViewMealDate"
         android:layout_alignStart="@+id/textViewMealDate" />
 
-    <TextView
+    <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/time"
-        android:textColor="@android:color/background_dark"
-        android:id="@+id/textViewTime"
+        android:id="@+id/spinnerTime"
+        android:entries="@array/time_array"
         android:layout_below="@+id/textViewMealTime"
         android:layout_alignStart="@+id/textViewMealTime" />
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/change_time"
-        android:id="@+id/buttonChangeTime"
-        android:onClick="changeTime"
-        android:layout_alignTop="@+id/textViewMealTime"
-        android:layout_centerHorizontal="true" />
+    <RadioGroup
+        android:id="@+id/radioGroupTime"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignEnd="@+id/textViewPickRestaurant"
+        android:layout_alignTop="@+id/spinnerTime"
+        android:layout_toEndOf="@+id/textViewRestaurant"
+        android:layout_above="@+id/textViewRestaurant">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AM"
+            android:id="@+id/radioButtonAM" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PM"
+            android:id="@+id/radioButtonPM" />
+
+    </RadioGroup>
 
 </RelativeLayout>
