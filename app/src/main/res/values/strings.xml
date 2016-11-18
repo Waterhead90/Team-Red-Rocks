@@ -21,6 +21,37 @@
     <string name="restaurant">Restaurant</string>
     <string name="change_time">Change Time</string>
     <string name="no_meals_text">You haven\'t added any meals today</string>
+    <string name="meals_text">Today\'s meals</string>
     <string name="select_restaurant">Select Restaurant</string>
     <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="add_item">Add Item</string>
+    <string name="review_meal">Review Meal</string>
+    <string name="no_items">Please add at least one item to the meal</string>
+    <string name="submit_meal">Submit Meal</string>
+    <string-array name="time_array">
+        <item>01:00</item>
+        <item>01:30</item>
+        <item>02:00</item>
+        <item>02:30</item>
+        <item>03:00</item>
+        <item>03:30</item>
+        <item>04:00</item>
+        <item>04:30</item>
+        <item>05:00</item>
+        <item>05:30</item>
+        <item>06:00</item>
+        <item>06:30</item>
+        <item>07:00</item>
+        <item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+    </string-array>
 </resources>
