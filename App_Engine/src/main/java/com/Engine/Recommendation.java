@@ -8,12 +8,14 @@ public class Recommendation {
     private String title;
     private String message;
     private String source;
+    private Nutrient nutrient;
 
-    public Recommendation(String title, String message, String source)
+    public Recommendation(String title, String message, String source, Nutrient nutrient)
     {
         this.title = title;
         this.message = message;
         this.source = source;
+        this.nutrient = nutrient;
     }
 
     public String getTitle() {

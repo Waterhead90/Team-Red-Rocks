@@ -20,17 +20,17 @@ public class MenuItem implements MenuInterface{
     private String name;
     private double servingSize;
     private String servingUnit;
-    private List<Nutrient> nutrients = new ArrayList();
+    private List<NutrientTotal> nutrientTotal = new ArrayList();
     private String category;
     private String infoSource;
     private String venue;
 
-    public MenuItem(String name, double servingSize, String servingUnit, Nutrient nutrient, String category, String infoSource, String venue)
+    public MenuItem(String name, double servingSize, String servingUnit, NutrientTotal nutrientTotal1, String category, String infoSource, String venue)
     {
         this.name = name;
         this.servingSize = servingSize;
         this.servingUnit = servingUnit;
-        nutrients.add(nutrient);
+        nutrientTotal.add(nutrientTotal1);
         this.category = category;
         this.infoSource = infoSource;
         this.venue = venue;
@@ -76,7 +76,7 @@ public class MenuItem implements MenuInterface{
         if (!Objects.equals(this.venue, other.venue)) {
             return false;
         }
-        if (!Objects.equals(this.nutrients, other.nutrients)) {
+        if (!Objects.equals(this.nutrientTotal, other.nutrientTotal)) {
             return false;
         }
         return true;
@@ -84,7 +84,7 @@ public class MenuItem implements MenuInterface{
 
     @Override
     public String toString() {
-        return "MenuItem{" + "name=" + name + ", servingSize=" + servingSize + ", servingUnit=" + servingUnit + ", nutrients=" + nutrients + ", category=" + category + ", infoSource=" + infoSource + ", venue=" + venue + '}';
+        return "MenuItem{" + "name=" + name + ", servingSize=" + servingSize + ", servingUnit=" + servingUnit + ", nutrients=" + nutrientTotal + ", category=" + category + ", infoSource=" + infoSource + ", venue=" + venue + '}';
     }
 
     @Override
