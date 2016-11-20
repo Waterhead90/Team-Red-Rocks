@@ -11,6 +11,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.Engine.Meal;
+
 import java.util.ArrayList;
 
 public class MenuItemActivity extends AppCompatActivity
@@ -23,6 +25,7 @@ public class MenuItemActivity extends AppCompatActivity
     private ArrayAdapter<String> adapter;
     private ArrayList<String> menuItems;
     private ArrayList<String> mealItems;
+    private Meal meal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,7 +34,7 @@ public class MenuItemActivity extends AppCompatActivity
         setContentView(R.layout.activity_menu_item);
 
         Intent intent = getIntent();
-        String restaurant = intent.getStringExtra(PickRestaurantActivity.EXTRA_MESSAGE);
+        meal = (Meal) intent.getSerializableExtra(PickRestaurantActivity.EXTRA_MESSAGE);
 
         menuTextView = (TextView) findViewById(R.id.textViewPickMeal);
         invalidTextView = (TextView) findViewById(R.id.textViewInvalidItem);
@@ -42,7 +45,7 @@ public class MenuItemActivity extends AppCompatActivity
 
         mealItems = new ArrayList<>();
 
-        getMenuItems(restaurant);
+        getMenuItems(meal.getLocation().getName());
         addItemSelectedListenerToSpinner();
     }
 
@@ -138,7 +141,7 @@ public class MenuItemActivity extends AppCompatActivity
                 mealItemsArray[i] = mealItems.get(i);
             }
             Intent intent = new Intent(this, ReviewMealActivity.class);
-            intent.putExtra("Meal items", mealItemsArray);
+            intent.putExtra("Meal items", meal);
             startActivity(intent);
         }
     }

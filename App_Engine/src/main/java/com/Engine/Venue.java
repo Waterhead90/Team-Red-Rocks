@@ -1,10 +1,12 @@
 package com.Engine;
 
+import java.io.Serializable;
+
 /**
  *
  * @author donovan.beckmann
  */
-public class Venue {
+public class Venue implements Serializable{
     private String name;
     private String memberName;
 
@@ -12,4 +14,6 @@ public class Venue {
     {
         this.name = name;
     }
+
+    public String getName() { return name;}
 }

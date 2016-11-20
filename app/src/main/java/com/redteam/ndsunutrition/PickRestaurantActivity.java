@@ -1,7 +1,5 @@
 package com.redteam.ndsunutrition;
 
-import android.app.Dialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,12 +10,12 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import org.w3c.dom.Text;
 
-import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.*;
+
+import com.Engine.*;
 
 /**
  * Created by gage.askegard on 10/22/2016.
@@ -33,6 +31,9 @@ public class PickRestaurantActivity extends AppCompatActivity
     private ArrayAdapter<String> adapter;
     private ArrayList<String> restaurants;
     private CalendarSpinnerAdapter mSpinnerDateAdapter;
+    private Meal meal;
+    private MealDate mealDate;
+    private Venue venue;
 
     private int hour;
     private int minute;
@@ -54,6 +55,7 @@ public class PickRestaurantActivity extends AppCompatActivity
         spinnerTime = (Spinner) findViewById(R.id.spinnerTime);
         radioButtonAM = (RadioButton) findViewById(R.id.radioButtonAM);
         radioButtonPM = (RadioButton) findViewById(R.id.radioButtonPM);
+        meal = new Meal();
 
         setCurrentTime();
         getRestaurants();
@@ -277,6 +279,29 @@ public class PickRestaurantActivity extends AppCompatActivity
         restaurantSpinner.setAdapter(adapter);
     }
 
+    private MealDate parseDateTime()
+    {
+        Calendar date = (Calendar) spinnerDate.getSelectedItem();
+        String[] time = spinnerTime.getSelectedItem().toString().split(":");
+        int month = date.get(Calendar.MONTH);
+        int day = date.get(Calendar.DAY_OF_MONTH);
+        int year = date.get(Calendar.YEAR);
+        int hr;
+        int min;
+
+        if(radioButtonPM.isChecked())
+        {
+            hr = Integer.parseInt(time[0]) + 12;
+        } else
+        {
+            hr = Integer.parseInt(time[0]);
+        }
+
+        min = Integer.parseInt(time[1]);
+
+        return new MealDate(year, month, day, hr, min);
+    }
+
     // Send an intent to MenuItemActivity to select a menu item
     // might be able to do this in the same activity but this is simpler for now
     public void viewMenu(View view)
@@ -291,12 +316,19 @@ public class PickRestaurantActivity extends AppCompatActivity
             Intent intent = new Intent(this, MenuItemActivity.class);
 
             String selection = restaurantSpinner.getSelectedItem().toString();
+
+            venue = new Venue(selection);
+            mealDate = this.parseDateTime();
+
+            meal = new Meal();
+            meal.setLocation(venue);
+            meal.setDate(mealDate);
             /*
             set meal location variable as the selection
             set meal date as the selected date and time
             send meal object to next activity
              */
-            intent.putExtra(EXTRA_MESSAGE, selection);
+            intent.putExtra(EXTRA_MESSAGE, meal);
             startActivity(intent);
         }
     }
