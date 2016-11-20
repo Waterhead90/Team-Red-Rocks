@@ -3,12 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/App_Engine/App_Engine.iml" filepath="$PROJECT_DIR$/App_Engine/App_Engine.iml" />
-      <module fileurl="file://$PROJECT_DIR$/App_Engine/App_Engine.iml" filepath="$PROJECT_DIR$/App_Engine/App_Engine.iml" />
       <module fileurl="file://$PROJECT_DIR$/Team-Red-Rocks.iml" filepath="$PROJECT_DIR$/Team-Red-Rocks.iml" />
       <module fileurl="file://$PROJECT_DIR$/Team-Red-Rocks-2.iml" filepath="$PROJECT_DIR$/Team-Red-Rocks-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Unused/Unused.iml" filepath="$PROJECT_DIR$/Unused/Unused.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Unused/Unused.iml" filepath="$PROJECT_DIR$/Unused/Unused.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

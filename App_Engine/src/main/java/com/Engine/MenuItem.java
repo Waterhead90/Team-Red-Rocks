@@ -20,17 +20,17 @@ public class MenuItem implements MenuInterface{
     private String name;
     private double servingSize;
     private String servingUnit;
-    private List<NutrientTotal> nutrientTotal = new ArrayList();
+    private List<NutrientTotal> nutrientTotal;
     private String category;
     private String infoSource;
     private String venue;
 
-    public MenuItem(String name, double servingSize, String servingUnit, NutrientTotal nutrientTotal1, String category, String infoSource, String venue)
+    public MenuItem(String name, double servingSize, String servingUnit, List<NutrientTotal> nutrientList, String category, String infoSource, String venue)
     {
         this.name = name;
         this.servingSize = servingSize;
         this.servingUnit = servingUnit;
-        nutrientTotal.add(nutrientTotal1);
+        nutrientTotal = nutrientList;
         this.category = category;
         this.infoSource = infoSource;
         this.venue = venue;

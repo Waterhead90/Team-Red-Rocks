@@ -7,4 +7,9 @@ package com.Engine;
 public class Venue {
     private String name;
     private String memberName;
+
+    public Venue(String name)
+    {
+        this.name = name;
+    }
 }

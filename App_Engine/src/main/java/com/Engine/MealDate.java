@@ -11,17 +11,13 @@ public class MealDate implements Date {
     private int hour;
     private int minute;
 
-    public String MealDate(int year, int month, int day, int hour, int minute)
+    public MealDate(int year, int month, int day, int hour, int minute)
     {
-        String info = "";
         this.year = year;
         this.month = month;
         this.day = day;
         this.hour = hour;
         this.minute = minute;
-
-        info = year + ", " + month + ", " + day + ", " + hour + ", " + minute;
-        return info;
     }
 
     @Override

@@ -19,10 +19,10 @@ public class Meal {
     private Date date;
     private List<MealEntry> mealEntries = new ArrayList();
 
-    public Meal(Venue location, Date date, MealEntry mealEntry) {
+    public Meal(Venue location, Date date, List<MealEntry> mealList) {
         this.location = location;
         this.date = date;
-        mealEntries.add(mealEntry);
+        mealEntries = mealList;
     }
 
     public Meal()
