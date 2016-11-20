@@ -1,10 +1,12 @@
 package com.Engine;
 
+import java.io.Serializable;
+
 /**
  *
  * @author donovan.beckmann
  */
-public class MealDate implements Date {
+public class MealDate implements Date, Serializable{
     private int year;
     private int month;
     private int day;

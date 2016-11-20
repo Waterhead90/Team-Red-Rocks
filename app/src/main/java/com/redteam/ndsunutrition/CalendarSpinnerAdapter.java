@@ -15,7 +15,7 @@ import java.util.Calendar;
  */
 public class CalendarSpinnerAdapter extends BaseAdapter
 {
-    private SimpleDateFormat mDateFormat = new SimpleDateFormat("MMM d yyyy");
+    private SimpleDateFormat mDateFormat = new SimpleDateFormat("MM/d/yyyy");
 
     private LayoutInflater mInflater;
     private Calendar mCalendar;
