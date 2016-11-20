@@ -29,11 +29,9 @@ public interface UserProfile {
     public List<Meal> getMeals();
     public void setMeals(List<Meal> list);
 
-    //WHAT DOES THIS MEAN?
     public void addMeal(Meal m);
-    public Meal removeMeal (Meal m);
-
-    //public List<Meal> getMealsFor(Date date);
+    public void removeMeal (Meal m);
+    public List<Meal> getMealsFor(Date date);
 
     @Override
     public String toString();

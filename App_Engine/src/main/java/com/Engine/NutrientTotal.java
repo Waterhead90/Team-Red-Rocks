@@ -12,6 +12,7 @@ public class NutrientTotal {
     private Nutrient nutrient;
     private double amount;
 
+
     public NutrientTotal(Nutrient nutrient, double amount) {
         this.nutrient = nutrient;
         this.amount = amount;

@@ -19,8 +19,8 @@ public interface MenuInterface {
     public void setServingSize(double serving);
     public String getServingUnit();
     public void setServingUnit(String servingUnit);
-    public List<Nutrient> getNutrients();
-    public void setNutrients(List<Nutrient> list);
+    public List<NutrientTotal> getNutrientTotals();
+    public void setNutrients(List<NutrientTotal> list);
     public String getCategory();
     public void setCategory(String category);
     public String getInfoSource();

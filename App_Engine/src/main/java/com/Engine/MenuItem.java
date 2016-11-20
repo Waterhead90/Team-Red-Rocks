@@ -7,6 +7,7 @@ package com.Engine;
  */
 
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -27,6 +28,7 @@ public class MenuItem implements MenuInterface{
 
     public MenuItem(String name, double servingSize, String servingUnit, List<NutrientTotal> nutrientList, String category, String infoSource, String venue)
     {
+
         this.name = name;
         this.servingSize = servingSize;
         this.servingUnit = servingUnit;
@@ -36,6 +38,7 @@ public class MenuItem implements MenuInterface{
         this.venue = venue;
     }
 
+    // Does this need to be here. If so, what default values are needed?
     MenuItem() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -89,72 +92,74 @@ public class MenuItem implements MenuInterface{
 
     @Override
     public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return name;
     }
 
     @Override
     public void setName(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.name = name;
     }
 
     @Override
     public double getServingSize() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return servingSize;
     }
 
     @Override
     public void setServingSize(double serving) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.servingSize = serving;
     }
 
     @Override
     public String getServingUnit() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return servingUnit;
     }
 
     @Override
     public void setServingUnit(String servingUnit) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.servingUnit = servingUnit;
+    }
+
+        //Explain how this should function. Like does this need to be a list of nutrient totals that get added
+        //when this class is created or is there suppose to be a list already made that has this information.
+    @Override
+    public List<NutrientTotal> getNutrientTotals() {
+        return nutrientTotal;
     }
 
     @Override
-    public List<Nutrient> getNutrients() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setNutrients(List<Nutrient> list) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setNutrients(List<NutrientTotal> list) {
+        this.nutrientTotal = list;
     }
 
     @Override
     public String getCategory() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return category;
     }
 
     @Override
     public void setCategory(String category) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.category = category;
     }
 
     @Override
     public String getInfoSource() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return infoSource;
     }
 
     @Override
     public void setInfoSource(String source) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.infoSource = source;
     }
 
     @Override
     public String getVenue() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return venue;
     }
 
     @Override
     public void setVenue(String venue) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.venue = venue;
     }
 
 }

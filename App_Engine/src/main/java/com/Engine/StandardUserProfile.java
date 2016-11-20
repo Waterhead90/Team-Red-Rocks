@@ -30,84 +30,98 @@ public class StandardUserProfile implements UserProfile {
 
     @Override
     public int getRecommendedCalories() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return recommendedCalories;
     }
 
     @Override
     public void setRecommendedCalories(int calories) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        recommendedCalories = calories;
     }
 
     @Override
     public int getWeight() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return weight;
     }
 
     @Override
     public void setWeight(int pounds) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        weight = pounds;
     }
 
     @Override
     public int getHeight() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return height;
     }
 
     @Override
     public void setHeight(int inches) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        height = inches;
     }
 
     @Override
     public int getActivityLevel() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return activityLevel;
     }
 
     @Override
     public void setActivityLevel(int intensity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        activityLevel = intensity;
     }
 
     @Override
     public char getGender() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return gender;
     }
 
     @Override
     public void setGender(char gender) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.gender = gender;
     }
 
     @Override
     public int getAge() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return age;
     }
 
     @Override
     public void setAge(int age) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.age = age;
     }
 
     @Override
     public List<Meal> getMeals() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return meals;
     }
 
     @Override
     public void setMeals(List<Meal> list) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.meals = list;
     }
 
     @Override
     public void addMeal(Meal m) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        meals.add(m);
     }
 
     @Override
-    public Meal removeMeal(Meal m) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void removeMeal(Meal m) {
+        meals.remove(m);
     }
 
+    // Double check this for me. Not sure if right or wrong.
+    @Override
+    public List<Meal> getMealsFor(Date date) {
+
+            for (Meal listMeals : meals)
+            {
+                for (int i = 0; i < meals.size(); i++)
+                if (meals.get(i).getDate().equals(date))
+                {
+                    return meals;
+                }
+            }
+        return null;
+    }
 
 
 }
