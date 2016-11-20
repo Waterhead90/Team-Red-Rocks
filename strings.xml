@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">NDSU Nutrition</string>
+    <string name="action_settings">Settings</string>
+    <string name="nutrients_heading">Nutrients</string>
+    <string name="calories_heading">calories</string>
+    <string name="totalfat_heading">total fat</string>
+    <string name="saturatedfat_heading">saturated fat</string>
+    <string name="cholesterol_heading">cholesterol</string>
+    <string name="sodium_heading">sodium</string>
+    <string name="totalcarbs_heading">total carbohydrates</string>
+    <string name="dietaryfiber_heading">dietary fiber</string>
+    <string name="sugar_heading">sugar</string>
+    <string name="protein_heading">protein</string>
+    <string name="potassium_heading">potassium</string>
+    <string name="today_heading">Today</string>
+    <string name="home_heading">This is the home tab</string>
+    <string name="recap_heading">This is the recap tab</string>
+    <string name="choose_meal">Pick A Meal Type</string>
+    <string name="choose_restaurant">Pick A Restaurant</string>
+    <string name="choose_item">Pick A Menu Item</string>
+    <string name="select_one">Select One</string>
+    <string name="invalid_selection">Please select a valid value</string>
+    <string name="user_profile">User Profile</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="recommendations">Recommendations</string>
+    <string name="custom_recipes">Custom Recipes</string>
+    <string name="export_data">Export data</string>
+    <string name="about">About</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="change_time">Change Time</string>
+    <string name="no_meals_text">You haven\'t added any meals today</string>
+    <string name="meals_text">Today\'s meals</string>
+    <string name="select_restaurant">Select Restaurant</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="add_item">Add Item</string>
+    <string name="review_meal">Review Meal</string>
+    <string name="no_items">Please add at least one item to the meal</string>
+    <string name="submit_meal">Submit Meal</string>
+    <string-array name="catagory_selection">
+        <item>Calories</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="time_array">
+        <item>01:00</item>
+        <item>01:30</item>
+        <item>02:00</item>
+        <item>02:30</item>
+        <item>03:00</item>
+        <item>03:30</item>
+        <item>04:00</item>
+        <item>04:30</item>
+        <item>05:00</item>
+        <item>05:30</item>
+        <item>06:00</item>
+        <item>06:30</item>
+        <item>07:00</item>
+        <item>07:30</item>
+        <item>08:00</item>
+        <item>08:30</item>
+        <item>09:00</item>
+        <item>09:30</item>
+        <item>10:00</item>
+        <item>10:30</item>
+        <item>11:00</item>
+        <item>11:30</item>
+        <item>12:00</item>
+        <item>12:30</item>
+    </string-array>
+</resources>
