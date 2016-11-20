@@ -6,6 +6,7 @@ package com.Engine;
  * and open the template in the editor.
  */
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import java.util.List;
  *
  * @author jordan.r.falcon
  */
-public class Meal {
+public class Meal implements Serializable {
 
     private Venue location;
     private Date date;
