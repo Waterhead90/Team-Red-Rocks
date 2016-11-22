@@ -13,7 +13,7 @@ import java.util.List;
  * @author jordan.r.falcon
  */
 public interface UserProfile extends Serializable {
-    //test 
+    //test
     public int getRecommendedCalories();
     public void setRecommendedCalories(int calories);
     public int getWeight();

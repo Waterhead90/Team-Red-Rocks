@@ -47,16 +47,36 @@ public class Meal implements Serializable {
         this.date = date;
     }
 
-    public List<MealEntry> getMealEntries(int index) {
-        return mealEntries.subList(index, index);
+    public List<MealEntry> getMealEntries() {
+        return mealEntries;
     }
 
-//      WHAT IS THIS SUPPOSE TO DO??????
-//    public void setMealEntries(int index, List<MealEntry> mealEntries) {
-//        mealEntries.set(index, mealEntries);
-//    }
+    public void setMealEntries(List<MealEntry> list) {
+        this.mealEntries = list;
+    }
 
+    @Override
+    public String toString() {
+        return "Meal{" +
+                "location =" + location +
+                ", date =" + date +
+                ", Meal Entries =" + mealEntries +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Meal)) return false;
+
+        Meal meal = (Meal) o;
+
+        if (location != null ? !location.equals(meal.location) : meal.location != null)
+            return false;
+        if (date != null ? !date.equals(meal.date) : meal.date != null) return false;
+        return mealEntries != null ? mealEntries.equals(meal.mealEntries) : meal.mealEntries == null;
+
+    }
 
 
 }

@@ -7,6 +7,7 @@ package com.Engine;
  */
 
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.Objects;
  *
  * @author jordan.r.falcon
  */
-public class MenuItem implements MenuInterface{
+public class MenuItem implements MenuInterface {
 
     private String name;
     private double servingSize;
@@ -38,56 +39,30 @@ public class MenuItem implements MenuInterface{
         this.venue = venue;
     }
 
-    // Does this need to be here. If so, what default values are needed?
-    MenuItem() {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     @Override
-    public int hashCode() {
-        int hash = 5;
-        return hash;
-    }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MenuItem)) return false;
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
+        MenuItem menuItem = (MenuItem) o;
+
+        if (Double.compare(menuItem.servingSize, servingSize) != 0) return false;
+        if (name != null ? !name.equals(menuItem.name) : menuItem.name != null) return false;
+        if (servingUnit != null ? !servingUnit.equals(menuItem.servingUnit) : menuItem.servingUnit != null)
             return false;
-        }
-        if (getClass() != obj.getClass()) {
+        if (nutrientTotal != null ? !nutrientTotal.equals(menuItem.nutrientTotal) : menuItem.nutrientTotal != null)
             return false;
-        }
-        final MenuItem other = (MenuItem) obj;
-        if (Double.doubleToLongBits(this.servingSize) != Double.doubleToLongBits(other.servingSize)) {
+        if (category != null ? !category.equals(menuItem.category) : menuItem.category != null)
             return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
+        if (infoSource != null ? !infoSource.equals(menuItem.infoSource) : menuItem.infoSource != null)
             return false;
-        }
-        if (!Objects.equals(this.servingUnit, other.servingUnit)) {
-            return false;
-        }
-        if (!Objects.equals(this.category, other.category)) {
-            return false;
-        }
-        if (!Objects.equals(this.infoSource, other.infoSource)) {
-            return false;
-        }
-        if (!Objects.equals(this.venue, other.venue)) {
-            return false;
-        }
-        if (!Objects.equals(this.nutrientTotal, other.nutrientTotal)) {
-            return false;
-        }
-        return true;
+        return venue != null ? venue.equals(menuItem.venue) : menuItem.venue == null;
+
     }
 
     @Override
     public String toString() {
-        return "MenuItem{" + "name=" + name + ", servingSize=" + servingSize + ", servingUnit=" + servingUnit + ", nutrients=" + nutrientTotal + ", category=" + category + ", infoSource=" + infoSource + ", venue=" + venue + '}';
+        return "MenuItem{" + "name =" + name + ", servingSize =" + servingSize + ", servingUnit =" + servingUnit + ", nutrients =" + nutrientTotal + ", category =" + category + ", infoSource =" + infoSource + ", venue =" + venue + '}';
     }
 
     @Override
@@ -161,5 +136,6 @@ public class MenuItem implements MenuInterface{
     public void setVenue(String venue) {
         this.venue = venue;
     }
+
 
 }

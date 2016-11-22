@@ -6,6 +6,8 @@ package com.Engine;
  * and open the template in the editor.
  */
 
+import java.io.Serializable;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -27,5 +29,6 @@ public interface MenuInterface {
     public void setInfoSource(String source);
     public String getVenue();
     public void setVenue(String venue);
+
 
 }

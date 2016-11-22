@@ -6,13 +6,14 @@ package com.Engine;
  * and open the template in the editor.
  */
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author jordan.r.falcon
  */
-public class Nutrient extends MenuItem{
+public class Nutrient implements Serializable {
 
     private String name;
     private String unit;
@@ -39,31 +40,17 @@ public class Nutrient extends MenuItem{
         this.unit = unit;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        return hash;
-    }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Nutrient other = (Nutrient) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.unit, other.unit)) {
-            return false;
-        }
-        return true;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Nutrient)) return false;
+
+        Nutrient nutrient = (Nutrient) o;
+
+        if (name != null ? !name.equals(nutrient.name) : nutrient.name != null) return false;
+        return unit != null ? unit.equals(nutrient.unit) : nutrient.unit == null;
+
     }
 
     @Override
